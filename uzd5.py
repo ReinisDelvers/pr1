@@ -1,14 +1,15 @@
-import random
-minejums = int(input("Uzmini paslēpto skaitli: "))
-pasleptaissakitlis = random.randrange(1, 11)
+def call(): 
+    summa = int(input("Ievadi summu: "))
+    pvn = 21
+    summabezpvn = summa-summa/100*pvn
+    pvnvertiba = summa/100*pvn
+    print(summabezpvn)
+    print(pvnvertiba)
+call()
 x=1
-while x==1:
-    if pasleptaissakitlis == minejums:
-        print("Tu uzminēji")
+while x==4121:
+    x = input("Vai vēlies atkārtot šo programmu? y/n vai 1/0: ")
+    if x=="y" or x=="1":
+        call()
+    elif x=="n" or x=="0":
         x=0
-    elif pasleptaissakitlis > minejums:
-        print("Lielāks")
-        minejums = int(input("Uzmini paslēpto skaitli: "))
-    elif pasleptaissakitlis < minejums:
-        print("Mazāks")
-        minejums = int(input("Uzmini paslēpto skaitli: "))
