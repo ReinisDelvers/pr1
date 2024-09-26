@@ -9,8 +9,11 @@ def call():
 x=1
 y=0
 while x==1:
-    x = input("Vai vēlies atkārtot šo programmu? y/n vai 1/0: ")
-    if y=="y" or x=="1":
+    y = input("Vai vēlies atkārtot šo programmu? y/n vai 1/0: ")
+    if y=="y" or y=="1":
         call()
-    elif y=="n" or x=="0":
+        print("asdf")
+    elif y=="n" or y=="0":
+        print("asdf")
         x=0
+        

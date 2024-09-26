@@ -65,13 +65,16 @@ def movement(wasd1, wasd2, wasd3, wasd4):
     else:
         print("KĻūda!")
 
-# def functionrepeatingbasedoninput(yornor1or0, function):
-#     x=1
-#     while x==1:
-#         if yornor1or0=="y" or x=="1":
-#             return function
-#         elif yornor1or0=="n" or x=="0":
-#             x=0
+def functionrepeatingbasedoninput(function):
+    x=1
+    while x==1:
+        y = input("Vai vēlies atkārtot šo programmu? y/n vai 1/0: ")
+        if y=="y" or y=="1":
+            function
+            print("asdf")
+        elif y=="n" or y=="0":
+            print("asdf")
+            x=0
 
 def guesthenumber():
     pasleptaissakitlis = random.randrange(1, 11)
