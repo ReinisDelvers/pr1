@@ -15,7 +15,6 @@ while y<1:
         if maxnumber<x:
             y=1
             a = a - b
-        
     elif b<a:
         b += a
         x=b
@@ -23,7 +22,6 @@ while y<1:
         if maxnumber<x:
             y=1
             b = b - a
-    
 for i in range(len(list)):
     if list[i]%2 == 0:
         r += list[i]
