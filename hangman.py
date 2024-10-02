@@ -57,45 +57,84 @@ hangmanpictures = [
         |
 =========
 """]
-
-words = ["apple", "boat", "cloud", "dance", "electric", "garden", "happiness", "island", "journey", "kitten", 
-         "laughter", "mountain", "orange", "puzzle", "question", "rainbow", "science", "tiger", "umbrella", 
-         "voice", "water", "xylophone", "yogurt", "zebra", "bread", "chocolate", "discovery", "energy", 
-         "flower", "gift", "home", "ice", "joy", "key", "light", "memory", "night", "ocean", "pencil", 
-         "quiet", "river", "star", "time", "universe", "vacation", "wind", "x-ray", "youth", "zip", 
-         "adventure", "balance", "creativity", "destiny", "explore", "freedom", "gratitude", "happiness", 
-         "inspiration", "kindness", "love", "music", "nature", "optimism", "peace", "quest", "respect", 
-         "serenity", "travel", "unity", "vision", "wonder", "ambition", "bravery", "confidence", 
-         "determination", "empathy", "friendship", "growth", "hope", "intelligence", "joyfulness", 
-         "knowledge", "loyalty", "mindfulness", "novelty", "openness", "resilience", "strength", 
-         "teamwork", "understanding", "vitality", "wisdom", "zest", "achievement", "beauty", 
-         "curiosity", "dedication", "excellence", "fun", "generosity"]
-
+wordseng = ["able", "about", "account", "acid", "across", "act", "addition", "adjustment", "advertisement", "after", "again", "against", "agreement", "air", "all", "almost", "among", "amount", "amusement", "and", "angle", "angry", "animal", "answer", "ant", "any", "apparatus", "apple", "approval", "arch", "argument", "arm", "army", "art", "as", "at", "attack", "attempt", "attention", "attraction", "authority", "automatic", "awake", "baby", "back", "bad", "bag", "balance", "ball", "band", "base", "basin", "basket", "bath", "be", "beautiful", "because", "bed", "bee", "before", "behaviour", "belief", "bell", "bent", "berry", "between", "bird", "birth", "bit", "bite", "bitter", "black", "blade", "blood", "blow", "blue", "board", "boat", "body", "boiling", "bone", "book", "boot", "bottle", "box", "boy", "brain", "brake", "branch", "brass", "bread", "breath", "brick", "bridge", "bright", "broken", "brother", "brown", "brush", "bucket", "building", "bulb", "burn", "burst", "business", "but", "butter", "button", "by", "cake", "camera", "canvas", "card", "care", "carriage", "cart", "cat", "cause", "certain", "chain", "chalk", "chance", "change", "cheap", "cheese", "chemical", "chest", "chief", "chin", "church", "circle", "clean", "clear", "clock", "cloth", "cloud", "coal", "coat", "cold", "collar", "colour", "comb", "come", "comfort", "committee", "common", "company", "comparison", "competition", "complete", "complex", "condition", "connection", "conscious", "control", "cook", "copper", "copy", "cord", "cork", "cotton", "cough", "country", "cover", "cow", "crack", "credit", "crime", "cruel", "crush", "cry", "cup", "cup", "current", "curtain", "curve", "cushion", "damage", "danger", "dark", "daughter", "day", "dead", "dear", "death", "debt", "decision", "deep", "degree", "delicate", "dependent", "design", "desire", "destruction", "detail", "development", "different", "digestion", "direction", "dirty", "discovery", "discussion", "disease", "disgust", "distance", "distribution", "division", "do", "dog", "door", "doubt", "down", "drain", "drawer", "dress", "drink", "driving", "drop", "dry", "dust", "ear", "early", "earth", "east", "edge", "education", "effect", "egg", "elastic", "electric", "end", "engine", "enough", "equal", "error", "even", "event", "ever", "every", "example", "exchange", "existence", "expansion", "experience", "expert", "eye", "face", "fact", "fall", "false", "family", "far", "farm", "fat", "father", "fear", "feather", "feeble", "feeling", "female", "fertile", "fiction", "field", "fight", "finger", "fire", "first", "fish", "fixed", "flag", "flame", "flat", "flight", "floor", "flower", "fly", "fold", "food", "foolish", "foot", "for", "force", "fork", "form", "forward", "fowl", "frame", "free", "frequent", "friend", "from", "front", "fruit", "full", "future", "garden", "general", "get", "girl", "give", "glass", "glove", "go", "goat", "gold", "good", "government", "grain", "grass", "great", "green", "grey", "grip", "group", "growth", "guide", "gun", "hair", "hammer", "hand", "hanging", "happy", "harbour", "hard", "harmony", "hat", "hate", "have", "he", "head", "healthy", "hear", "hearing", "heart", "heat", "help", "high", "history", "hole", "hollow", "hook", "hope", "horn", "horse", "hospital", "hour", "house", "how", "humour", "I", "ice", "idea", "if", "ill", "important", "impulse", "in", "increase", "industry", "ink", "insect", "instrument", "insurance", "interest", "invention", "iron", "island", "jelly", "jewel", "join", "journey", "judge", "jump", "keep", "kettle", "key", "kick", "kind", "kiss", "knee", "knife", "knot", "knowledge", "land", "language", "last", "late", "laugh", "law", "lead", "leaf", "learning", "leather", "left", "leg", "let", "letter", "level", "library", "lift", "light", "like", "limit", "line", "linen", "lip", "liquid", "list", "little", "living", "lock", "long", "look", "loose", "loss", "loud", "love", "low", "machine", "make", "male", "man", "manager", "map", "mark", "market", "married", "mass", "match", "material", "may", "meal", "measure", "meat", "medical", "meeting", "memory", "metal", "middle", "military", "milk", "mind", "mine", "minute", "mist", "mixed", "money", "monkey", "month", "moon", "morning", "mother", "motion", "mountain", "mouth", "move", "much", "muscle", "music", "nail", "name", "narrow", "nation", "natural", "near", "necessary", "neck", "need", "needle", "nerve", "net", "new", "news", "night", "no", "noise", "normal", "north", "nose", "not", "note", "now", "number", "nut", "observation", "of", "off", "offer", "office", "oil", "old", "on", "only", "open", "operation", "opinion", "opposite", "or", "orange", "order", "organization", "ornament", "other", "out", "oven", "over", "owner", "page", "pain", "paint", "paper", "parallel", "parcel", "part", "past", "paste", "payment", "peace", "pen", "pencil", "person", "physical", "picture", "pig", "pin", "pipe", "place", "plane", "plant", "plate", "play", "please", "pleasure", "plough", "pocket", "point", "poison", "polish", "political", "poor", "porter", "position", "possible", "pot", "potato", "powder", "power", "present", "price", "print", "prison", "private", "probable", "process", "produce", "profit", "property", "prose", "protest", "public", "pull", "pump", "punishment", "purpose", "push", "put", "quality", "question", "quick", "quiet", "quite", "rail", "rain", "range", "rat", "rate", "ray", "reaction", "reading", "ready", "reason", "receipt", "record", "red", "regret", "regular", "relation", "religion", "representative", "request", "respect", "responsible", "rest", "reward", "rhythm", "rice", "right", "ring", "river", "road", "rod", "roll", "roof", "room", "root", "rough", "round", "rub", "rule", "run", "sad", "safe", "sail", "salt", "same", "sand", "say", "scale", "school", "science", "scissors", "screw", "sea", "seat", "second", "secret", "secretary", "see", "seed", "seem", "selection", "self", "send", "sense", "separate", "serious", "servant", "sex", "shade", "shake", "shame", "sharp", "sheep", "shelf", "ship", "shirt", "shock", "shoe", "short", "shut", "side", "sign", "silk", "silver", "simple", "sister", "size", "skin", "skirt", "sky", "sleep", "slip", "slope", "slow", "small", "smash", "smell", "smile", "smoke", "smooth", "snake", "sneeze", "snow", "so", "soap", "society", "sock", "soft", "solid", "some", "son", "song", "sort", "sound", "soup", "south", "space", "spade", "special", "sponge", "spoon", "spring", "square", "stage", "stamp", "star", "start", "statement", "station", "steam", "steel", "stem", "step", "stick", "sticky", "stiff", "still", "stitch", "stocking", "stomach", "stone", "stop", "store", "story", "straight", "strange", "street", "stretch", "strong", "structure", "substance", "such", "sudden", "sugar", "suggestion", "summer", "sun", "support", "surprise", "sweet", "swim", "system", "table", "tail", "take", "talk", "tall", "taste", "tax", "teaching", "tendency", "test", "than", "that", "the", "then", "theory", "there", "thick", "thin", "thing", "this", "thought", "thread", "throat", "through", "through", "thumb", "thunder", "ticket", "tight", "till", "time", "tin", "tired", "to", "toe", "together", "tomorrow", "tongue", "tooth", "top", "touch", "town", "trade", "train", "transport", "tray", "tree", "trick", "trouble", "trousers", "true", "turn", "twist", "umbrella", "under", "unit", "up", "use", "value", "verse", "very", "vessel", "view", "violent", "voice", "waiting", "walk", "wall", "war", "warm", "wash", "waste", "watch", "water", "wave", "wax", "way", "weather", "week", "weight", "well", "west", "wet", "wheel", "when", "where", "while", "whip", "whistle", "white", "who", "why", "wide", "will", "wind", "window", "wine", "wing", "winter", "wire", "wise", "with", "woman", "wood", "wool", "word", "work", "worm", "wound", "writing", "wrong", "year", "yellow", "yes", "yesterday", "you", "young", "Bernhard", "Breytenbach", "Android"]
+wordslv = ["māja", "skola", "auto", "grāmata", "suns", "kaķis", "galds", "krēsls", "logs", "durvis", "ūdens", "maize", "piens", "kafija", "tēja", "ēdiens", "auglis", "dārzenis", "zieds", "koks", "putns","zivs", "dzīvnieks", "debesis", "saule", "mēness", "zvaigzne", "kalns", "upe", "ezers", "jūra", "zeme", "vārds", "teikums", "doma", "frāze", "saruna", "jautājums", "atbilde", "ideja", "vieta","pilsēta", "valsts", "mūzika", "filma", "glezna", "stāsts", "dzeja", "kultūra", "sports", "izglītība","darbs", "laiks", "gadalaiks", "sezona", "ziema", "pavasaris", "vasara", "rudens", "mugura", "sirds","rokas", "kājas", "acis", "mati", "lūpas", "zobi", "smiekli", "sāpes", "prieks", "bēdas", "mīlestība","draugs", "ģimene", "tētis", "mamma", "brālis", "māsa", "bērns", "vecmāmiņa", "vecvectēvs", "māte","tēvs", "uzdevums", "stāsts", "pasaka", "daba", "vide", "pasaules", "ceļojums", "lidojums", "autobuss","trauks", "eļļa", "sviests", "cukurs", "sāls", "pipari", "garšviela", "tvaiks", "cepšana", "vārīšana","ēdienkarte", "restorāns", "kafejnīca", "bārs", "veikals", "tirgus", "sabiedriskā", "transporta", "ceļš","pārvietošanās", "kalendārs", "laikraksts", "žurnāls", "grāmatu", "bibliotēka", "skatuve", "koncerts","izstāde", "vīns", "alus", "šampanietis", "kokteils", "pēcpusdiena", "vakars", "rīts", "pārsteigums","sniegs", "lietus", "vējš", "siltums", "aukstums", "dūmi", "uguns", "sniega", "sniegs", "zāle","ceļmalas", "ceļgali", "kauli", "muskuļi", "sudrabs", "zelts", "bronza", "metāls", "koks", "augs","smarža", "skaņa", "krāsa", "forma", "līnija", "punkti", "apļa", "kvadrāts", "trijstūris", "izteiksme","spriedums", "izvēle", "lēmums", "pieredze", "sajūta", "emocija", "atsauksme", "viedoklis", "diskusija","saruna", "mīts", "pasaka", "vārdi", "tēma", "uzdevums", "izstāde", "izsniegšana", "satiksme", "gaisma","ēna", "spēle", "kārtis", "darbība", "spēlētājs", "kāzu", "balle", "pasākums", "skats", "jautājums","paziņojums", "ziņa", "reklāma", "informācija", "pārskats", "pētījums", "apspriešana", "komentārs","ideoloģija", "tehnoloģija", "metode", "prakse", "rezultāts", "dati", "pētījums", "teorija", "apmācība","izglītība", "skola", "kolēģis", "studijas", "universitāte", "kursa", "bakalaurs", "maģistrs", "doktors","apliecinājums", "sertifikāts", "nosacījums", "līgums", "darījums", "darba", "vietas", "ražošanas","pakalpojumi", "tirdzniecība", "ekonomika", "finanses", "izmaksa", "peļņa", "ieguldījums", "investīcijas","pārdošana", "iegāde", "uzņēmums", "kompānija", "projekts", "mārketings", "reklāma", "zīmols", "zīmola","attiecības", "partnerība", "klients", "patērētājs", "prece", "pakalpojums", "piegādātājs", "uzņēmējs","darbinieks", "birojs", "darbība", "profesija", "amats", "aizsardzība", "drošība", "tiesības", "likums","likums", "juridiskā", "pārkāpums", "pārkāpums", "nosacījums", "tiesāšanās", "atlīdzība", "apdrošināšana","risks", "lēmums", "strīds", "tiesa", "tiesnesis", "advokāts", "jurists", "atbildība", "sodīts", "sodi","soda", "dekrēts", "izpilde", "pārbaude", "izmeklēšana", "pārkāpums", "izpilddirektors", "pārvaldība","pārvalde", "darbība", "politika", "sociālais", "ekonomiskā", "konkurence", "tirgus", "produkti","ražotāji", "pakalpojumi", "piegādātāji", "investori", "klienti", "patērētāji", "uzņēmēji", "darbinieki","pašnodarbinātie", "nodokļi", "nodokļu", "sistēma", "fiskālā", "politika", "regulējums", "noteikums","normas", "pārliecināšanās", "pārskati", "atbilstība", "apstrāde", "produkcija", "piegāde", "sadarbība","izpēte", "pētniecība", "pētnieks", "izpētes", "projekts", "finansējums", "programmas", "fondi","investīcijas", "ražošana", "darbnīca", "uzņēmums", "uzņēmējdarbība", "tehnoloģijas", "iekārtas","kvalitāte", "standarts", "uzticība", "pašvaldība", "komiteja", "padome", "apgāde", "pārvalde","pārvaldība", "viss", "organizācija", "apvienība", "savienība", "centrs", "nodaļa", "struktūra","pārraudzība", "uzraudzība", "izpilde", "pārbaude", "izsniegšana", "sertifikācija", "reģistrācija","apliecinājums", "paziņojums", "pārskats", "analīze", "pētījums", "izdevums", "ziņojums", "lēmums","saturs", "atbalsts", "attiecības", "komunikācija", "informācija", "ziņas", "ziņu", "nepieciešamība","izpilde", "piekļuve", "pakalpojums", "mājas", "tehnoloģija", "uzņēmējdarbība", "finanses","izdevumi", "investīcijas", "darbības", "pārvaldība", "komanda", "tehnoloģiju", "atbalsts", "pārdošana","piegāde", "reklāma", "zināšanas", "izglītība", "darbs", "mācības"]
 x=1
 y=0
-t=1
-
 while x==1:
-    y = input("Do you want to play hangman yes/no: ")
-    if y=="yes":
-        m = input("Do you want a random word input r or if you want a selected word input s: ")
-        if m == "r":
-            selectedword = words.random
-        selectedword = words[int(input("Select word by choosing a number 0-99: "))]
-        while t==1:
-            remainingattempts = 6
-            if remainingattempts > 0:
-                guessedletter = input("Guess a letter: ")
-                guessedletterlist = []
-                guessedletterlist += guessedletter
-
-                print(hangmanpictures[remainingattempts])
-                print(f"Remaining attempts {remainingattempts}")
-
-            elif remainingattempts == 0:
-                print(hangmanpictures[remainingattempts])
-                print(f"Remaining attempts {remainingattempts}")
-                print("Game over")
+    y = input("Do you want to play hangman y/n: ")
+    if y=="y":
+        t=1
+        l=1
+        m = input("""For random english word input eng
+For random latvian word input lv 
+For your own word input mine: """)
+        lifesleft = 6
+        guessedletterlist = []
+        wordprogress = ""
+        while l==1:
+            if m=="eng":
+                selectedword = wordseng[random.randint(0,len(wordseng))]
+                l=0
+            elif m=="lv":
+                selectedword = wordslv[random.randint(0,len(wordslv))]
+                l=0
+            elif m=="s":
+                selectedword = input("Write a word you want to guess: ")
+                l=0
+            else:
+                m = input("""For random english word input eng
+For random latvian word input lv 
+For your own word input mine: """)
+        print(hangmanpictures[lifesleft])
+        print(f"Lifes left {lifesleft}")
+        wordlen = "_"*len(selectedword)
+        print(f"Word progress {wordlen}")
+        while t==1:          
+            if selectedword == wordprogress:
+                print(hangmanpictures[lifesleft])
+                print(f"Lifes left {lifesleft}")
+                print("Word guessed")
+                print(f"The word was {selectedword}")
+                print(f"Guessed letters {guessedletterlist}")
                 t=0
-    elif y=="no":
+            
+            elif lifesleft > 0:
+                c=0
+                n=1
+                letterguessed = input("Guess a letter: ")
+                while n==1:
+                    if letterguessed in guessedletterlist:
+                        letterguessed = input("You already guessed this letter: ")
+                    elif 1 != len(letterguessed):
+                        letterguessed = input("Guess one letter at a time: ")
+                    else:
+                        n=0
+                guessedletterlist += letterguessed
+                wordprogress = ""
+                for i in selectedword:
+                    if i in guessedletterlist:
+                        wordprogress += i
+                    else:
+                        wordprogress += "_"
+                for i in wordprogress:
+                    if i == letterguessed:
+                        c=1
+                if c==0:
+                    lifesleft-=1
+                print(hangmanpictures[lifesleft])
+                print(f"Lifes left {lifesleft}")
+                print(f"Word progress {wordprogress}")
+                print(f"Guessed letters {guessedletterlist}")
+        
+            elif lifesleft == 0:
+                print(hangmanpictures[lifesleft])
+                print(f"Lifes left {lifesleft}")
+                print("Game over")
+                print(f"Word progress {wordprogress}")
+                print(f"The word was {selectedword}")
+                print(f"Guessed letters {guessedletterlist}")
+                t=0
+
+    elif y=="n":
         x=0
