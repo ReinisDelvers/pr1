@@ -74,7 +74,7 @@ y=0
 while x==1:
     # Mainīgajam y piešķir vērtību ko spēlētājs ievada (kurā lielos burtus pārvērš uz mazajiem burtiem, lai būtu vienalga raksta ar lielajiem vai mazajiem burtiem) 
     y = input("Do you want to play hangman y/n: ").lower()
-    
+
     # Pārbauda vai palaist spēli skatoties uz ievades vērtību
     if y=="y":
         # t ir mainīgais lai while loop strādātu līdz tā tiek apstādināta mainīgo nomainot par citu skaitli kā 1  
@@ -145,7 +145,7 @@ For your own word input mine: """).lower()
             
             # Pārbauda vai spēlētājs ir dzīvs
             elif lifesleft > 0:
-                # c ir mainīgais kuru maina lai pateiktu vai spēlētājs ir uzminējis burtu, ja ir 0 atņemas dzīvība
+                # c ir mainīgais kuru maina lai pateiktu vai spēlētājs ir uzminējis burtu
                 c=0
                 # n ir mainīgais lai while loop strādātu līdz tā tiek apstādināta mainīgo nomainot par citu skaitli kā 1 
                 n=1
@@ -178,7 +178,6 @@ For your own word input mine: """).lower()
                     if i in guessedletterlist:
                         # Pievieno pareizi uzminēto burtu
                         wordprogress += i
-                        c=1
                     # Ja tas nav
                     else:
                         # Pievieno apakšsvītru
@@ -196,7 +195,7 @@ For your own word input mine: """).lower()
                 if c==0:
                     # Atņem vienu dzīvību
                     lifesleft-=1
-                
+
                 # Izprintē visu vajadzīgo informāciju
                 print(hangmanpictures[lifesleft])
                 print(f"Lifes left {lifesleft}")
