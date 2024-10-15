@@ -74,6 +74,7 @@ y=0
 while x==1:
     # Mainīgajam y piešķir vērtību ko spēlētājs ievada (kurā lielos burtus pārvērš uz mazajiem burtiem, lai būtu vienalga raksta ar lielajiem vai mazajiem burtiem) 
     y = input("Do you want to play hangman y/n: ").lower()
+    
     # Pārbauda vai palaist spēli skatoties uz ievades vērtību
     if y=="y":
         # t ir mainīgais lai while loop strādātu līdz tā tiek apstādināta mainīgo nomainot par citu skaitli kā 1  
@@ -91,24 +92,25 @@ For your own word input mine: """).lower()
         # Izveido mainīgo kura vērtība būs vienāda ar to cik tālu spēlētājs ir atminējis
         wordprogress = ""
         # While loops kurā prasīs spēlētājam kādā veidā iegūs minējamo vārdu
+        
         while l==1:
             # Ja spēlētājs grib minēt angļu vārdu ievadīs "eng" consolē
             if m=="eng":
                 # Mainīgajam selectedword nomainīs vērtību uz vienu no angļu vārdiem no saraksta wordseng
                 selectedword = wordseng[random.randint(0,len(wordseng))]
-                # Nomainot l vērtību uz 0 izies arā no šobrīdējā while loopa
+                # Nomaina l vērtību uz 0 izies arā no šobrīdējā while loopa
                 l=0
             # Ja spēlētājs grib minēt latviešu vārdu ievadīs "lv" consolē
             elif m=="lv":
                 # Mainīgajam selectedword nomainīs vērtību uz vienu no latviešu vārdiem no saraksta wordslv
                 selectedword = wordslv[random.randint(0,len(wordslv))]
-                # Nomainot l vērtību uz 0 izies arā no šobrīdējā while loopa
+                # Nomaina l vērtību uz 0 izies arā no šobrīdējā while loopa
                 l=0
             # Ja spēlētājs grib pats ievadīt mināmo vārdu ievadīs "mine" consolē
             elif m=="mine":
                 # Mainīgajam selectedword nomainīs vērtību uz spēlētāja ievadīto vērtību
                 selectedword = input("Write a word you want to guess: ")
-                # Nomainot l vērtību uz 0 izies arā no šobrīdējā while loopa
+                # Nomaina l vērtību uz 0 izies arā no šobrīdējā while loopa
                 l=0
             # Ja m vērtība neapmierina nevienu no iepriekšējām pārbaudēm, tad spēlētājam parsīs ievadīt atkārtoti
             else:
@@ -116,57 +118,103 @@ For your own word input mine: """).lower()
                 m = input("""For random english word input eng
 For random latvian word input lv 
 For your own word input mine: """).lower()
+                
         # Mainīgajam selectedword nomainīs visus lielos burtus uz mazajiem, lai nebūtu tie nebūtu jāmin atsevišķi
         selectedword = selectedword.lower()
+        # Consolē izprintē pareizo karātavu attēlu atkarībā no atlikušajām dzīvībām
         print(hangmanpictures[lifesleft])
+        # Consolē izprintē atlikušajās dzīvības
         print(f"Lifes left {lifesleft}")
+        # Strings kurā saglabāts minējamā vārda garums
         wordlen = "_"*len(selectedword)
+        # Consolē izprintē apakšsvītras lai redzētu cik garš ir redzamais vārds
         print(f"Word progress {wordlen}")
+        # While loops kurā norisināsies spēle līdz zaudēs vai vinēs
+
         while t==1:
+            # Pārbauda vai spēlētājs ir vinējis spēli
             if selectedword == wordprogress:
+                # Izprintē visu vajadzīgo informāciju
                 print(hangmanpictures[lifesleft])
                 print(f"Lifes left {lifesleft}")
                 print("Word guessed")
                 print(f"The word was {selectedword}")
                 print(f"Guessed letters {guessedletterlist}")
+                # Nomaina t vērtību uz 0 izies arā no šobrīdējā while loopa
                 t=0
             
+            # Pārbauda vai spēlētājs ir dzīvs
             elif lifesleft > 0:
+                # c ir mainīgais kuru maina lai pateiktu vai spēlētājs ir uzminējis burtu, ja ir 0 atņemas dzīvība
                 c=0
+                # n ir mainīgais lai while loop strādātu līdz tā tiek apstādināta mainīgo nomainot par citu skaitli kā 1 
                 n=1
+                # Mainīgajam letterguessed piešķir vērtību ko spēlētājs ievada (kurā lielos burtus pārvērš uz mazajiem burtiem, lai būtu vienalga raksta ar lielajiem vai mazajiem burtiem), kas tiks izmantots lai spēlētu spēli
                 letterguessed = input("Guess a letter: ").lower()
+
+                # While loops kurā pārbauda vai letterguessed vērtība atbilst prasībām
                 while n==1:
+                    # Pārbauda vai spēlētājs burtu jau ir minējis
                     if letterguessed in guessedletterlist:
+                        # Liek minēt vēlreiz
                         letterguessed = input("You already guessed this letter: ").lower()
+                    # Pārbauda vai spēlētājs ievadīja tikai vienu burtu
                     elif 1 != len(letterguessed):
+                        # Liek minēt vēlreiz
                         letterguessed = input("Guess one letter at a time: ").lower()
                     else:
+                        # Nomaina n vērtību uz 0 izies arā no šobrīdējā while loopa
                         n=0
+                
+                # Pievieno minēto burtu minēto burtu sarakstam
                 guessedletterlist += letterguessed
+                # Nomaina wordprgress uz tukšu sttringu, lai veidotu jaunu, tas attēlos uzminētos burtus apakšsvītru vietā
                 wordprogress = ""
+
+                # For loops kurā tiek pievienot jauna vērtība wordprogress
+                # Iet cauri izvēlētajam vārdam pa burtiem un to uzliek kā i vērtību  
                 for i in selectedword:
+                    # Pārbauda vai i ir vienāds ar kādu no vērtībām guessedletterlist
                     if i in guessedletterlist:
+                        # Pievieno pareizi uzminēto burtu
                         wordprogress += i
-                    else:
-                        wordprogress += "_"
-                for i in wordprogress:
-                    if i == letterguessed:
                         c=1
+                    # Ja tas nav
+                    else:
+                        # Pievieno apakšsvītru
+                        wordprogress += "_"
+                
+                # Pārbauda vai spēlētājs uzminēja burtu pareizi
+                # Iet cauri wordprogress pa burtiem un to uzliek kā i vērtību  
+                for i in wordprogress:
+                    # Pārbauda vai i ir vienāds ar kadu no minētajiem burtiem
+                    if i == letterguessed:
+                        # Nomaina c vērtību uz 1, kas nozīmē ka ir uzminēts pareizi 
+                        c=1
+
+                # Pārbauda vai spēlētājs neuzminēja burtu pareizi
                 if c==0:
+                    # Atņem vienu dzīvību
                     lifesleft-=1
+                
+                # Izprintē visu vajadzīgo informāciju
                 print(hangmanpictures[lifesleft])
                 print(f"Lifes left {lifesleft}")
                 print(f"Word progress {wordprogress}")
                 print(f"Guessed letters {guessedletterlist}")
-        
+
+            # Pārbauda vai spēlētājs ir zaudējis spēli
             elif lifesleft == 0:
+                # Izprintē visu vajadzīgo informāciju
                 print(hangmanpictures[lifesleft])
                 print(f"Lifes left {lifesleft}")
                 print("Game over")
                 print(f"Word progress {wordprogress}")
                 print(f"The word was {selectedword}")
                 print(f"Guessed letters {guessedletterlist}")
+                # Nomaina t vērtību uz 0 izies arā no šobrīdējā while loopa
                 t=0
-
+    # Pārbauda vai spēlētājs negrib spēlēt spēli
     elif y=="n":
+        # Nomaina x vērtību uz 0 izies arā no šobrīdējā while loopa
         x=0
