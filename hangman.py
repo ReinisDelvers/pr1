@@ -213,6 +213,7 @@ For your own word input mine: """).lower()
                 print(f"Guessed letters {guessedletterlist}")
                 # Nomaina t vērtību uz 0 izies arā no šobrīdējā while loopa
                 t=0
+    
     # Pārbauda vai spēlētājs negrib spēlēt spēli
     elif y=="n":
         # Nomaina x vērtību uz 0 izies arā no šobrīdējā while loopa
