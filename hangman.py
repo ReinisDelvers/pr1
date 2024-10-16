@@ -1,3 +1,17 @@
+'''
+1. Meklētā vārda izvēle
+    Ar random biliotēku palīdzību dabūs random vārdu no vārdu saraksta vai spēlētājs varēs ievadīt savu vārdu
+2. Lietotāja informācijas ievadīšana
+    Lietotājs ievadīs informāciju konsolē ar input palīdzību un tā tiks pārbaudīta vai mainīta kur vajadzīgs.
+3. Iegūtās informācijas salīdzināšana ar vārdu
+    Pēc katra minējuma pārbaudīs vai spēlētājs ir uzminējis pilno vārdu salīdzinot vienu ar otru.
+4. Informācijas attēlojums
+    Informācija tiks attēlota konsolē, karātavas progresa attēls izsauks no iepriekš izveidotas saraksta 
+    un pārējo informāciju mainīs un izprintēs ar spēles gaitu.
+5. Spēles beigas un atkārtošana
+    Spēles beigās tiks ierakstīta uzvara consolē. Spēli varēs atkārtot atbildod uz konsoles jautājumu.
+'''
+
 # Importē random bibliotēku, lai varētu izvēlēties random vārdus
 import random
 
