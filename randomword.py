@@ -1,7 +1,8 @@
 from random import randrange
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 text = ""
-for i in range(100):
+wordcount = randrange(1, 1001)
+for i in range(wordcount):
     temp = ""
     lenght = randrange(1,21)
     for b in range(lenght):
