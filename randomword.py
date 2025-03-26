@@ -10,4 +10,7 @@ for i in range(wordcount):
         temp = temp + alphabet[letter]
     text = text + temp + " "
 
-print(text)
+f = open("randomword.txt", "a")
+f.write(text)
+f.close()
+
